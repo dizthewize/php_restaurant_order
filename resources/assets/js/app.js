@@ -7,16 +7,23 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+$(function() {
+  //click about-btn
+  $('.open-btn').click(function() {
+    $('.overlay').addClass('is-open');
+  });
+  //close-modal
+  $('.close-btn').click(function() {
+    $('.overlay').removeClass('is-open');
+  });
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+  var stripe = Stripe('pk_test_LwQhHKhF3J3UOkEORZ3YuJE0');
 
-Vue.component('example', require('./components/Example.vue'));
+  var elements = stripe.elements();
 
-const app = new Vue({
-    el: '#app'
+  var card = elements.create('card');
+
+  stripe.createToken(card).then(function(result) {
+  // handle result.error or result.token
+  });
 });

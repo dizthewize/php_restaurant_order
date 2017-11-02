@@ -177,6 +177,14 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Third Party Service Providers...
+         */
+         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+         Laratrust\LaratrustServiceProvider::class,
+         Collective\Html\HtmlServiceProvider::class,
+
+
     ],
 
     /*
@@ -199,6 +207,7 @@ return [
         'Broadcast' => Illuminate\Support\Facades\Broadcast::class,
         'Bus' => Illuminate\Support\Facades\Bus::class,
         'Cache' => Illuminate\Support\Facades\Cache::class,
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Config' => Illuminate\Support\Facades\Config::class,
         'Cookie' => Illuminate\Support\Facades\Cookie::class,
         'Crypt' => Illuminate\Support\Facades\Crypt::class,
@@ -206,9 +215,12 @@ return [
         'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
         'File' => Illuminate\Support\Facades\File::class,
+        'Form' => Collective\Html\FormFacade::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
+        'Html' => Collective\Html\HtmlFacade::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
+        'Laratrust' => Laratrust\LaratrustFacade::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
