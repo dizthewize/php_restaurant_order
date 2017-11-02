@@ -25,7 +25,7 @@
 
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="{{ url('items.index') }}">View Items
+              <a href="{{ route('items.index') }}">View Items
               </a>
             </li>
 
