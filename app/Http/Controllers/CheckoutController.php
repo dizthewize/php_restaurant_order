@@ -38,7 +38,7 @@ class CheckoutController extends Controller
 
       // Set your secret key: remember to change this to your live secret key in production
       // See your keys here: https://dashboard.stripe.com/account/apikeys
-      \Stripe\Stripe::setApiKey("sk_test_AA8RELe8B8A4AsLH1m1oDIpg");
+      \Stripe\Stripe::setApiKey(env('STRIPE_API_KEY'));
 
       // Token is created using Stripe.js or Checkout!
       // Get the payment token submitted by the form:
